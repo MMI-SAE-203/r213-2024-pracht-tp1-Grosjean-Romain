@@ -11,5 +11,7 @@ const menuIsOpen = ref(false)
 
 <template>
   <h1 class="text-2xl">Boucle sur des données</h1>
-  
+  <section>
+    
+  </section>
 </template>

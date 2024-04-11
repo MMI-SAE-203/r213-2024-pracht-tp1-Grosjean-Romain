@@ -6,6 +6,7 @@ onErrorCaptured((err, instance, info) => {
   console.error('erreur : ', err, '\ninfo : ', info, '\ncomposant : ', instance)
   return true
 })
+
 const menuIsOpen = ref(false)
 </script>
 
