@@ -25,8 +25,8 @@ const menuIsOpen = ref(false)
 >
 <nav id="mainNav" v-show="menuIsOpen">
   <ul>
-    <li><a href="#">item 1</a></li>
-    <li><a href="#">item 2</a></li>
+    <li><a href="/src/pages/index.vue">Lien vers Accordéon</a></li>
+    <li><a href="/src/pages/bouc ">Lien vers Boucle sur des données</a></li>
     <li><a href="#">item 3</a></li>
   </ul>
 </nav>

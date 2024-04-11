@@ -1,9 +1,16 @@
 <script setup lang="ts">
-//
+import { onErrorCaptured, ref } from 'vue'
+import { RouterLink, RouterView } from 'vue-router/auto'
+
+onErrorCaptured((err, instance, info) => {
+  console.error('erreur : ', err, '\ninfo : ', info, '\ncomposant : ', instance)
+  return true
+})
+const menuIsOpen = ref(false)
 </script>
 
 <template>
-  <h1 class="text-2xl">Bonjour monde !</h1>
+  <h1 class="text-2xl">Accordéons</h1>
   <section>
   <button class="text-xl">bouton 1</button>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sit enim, eveniet quisquam officiis facilis aperiam est hic, aut perspiciatis, earum modi atque odio praesentium fuga nemo reprehenderit iure. Porro!</p>
