@@ -17,7 +17,7 @@ const menuIsOpen = ref(false)
   class="rounded-full border-2 border-red-600 bg-red-300 px-2"
 > menu
 </button>
-<nav id="mainNav">
+<nav id="mainNav" v-show>
   <ul>
     <li><a href="#">item 1</a></li>
     <li><a href="#">item 2</a></li>
