@@ -15,9 +15,9 @@ const menuIsOpen = ref(false)
   aria-controls="mainNav"
   aria-expanded="true"
   class="rounded-full border-2 border-red-600 bg-red-300 px-2"
-> menu
+@pointerdown="menuIsOpen = !menuIsOpen">menu
 </button>
-<nav id="mainNav" v-show>
+<nav id="mainNav" v-show="menuIsOpen">
   <ul>
     <li><a href="#">item 1</a></li>
     <li><a href="#">item 2</a></li>
