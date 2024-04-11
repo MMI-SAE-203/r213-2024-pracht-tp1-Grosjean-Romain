@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { onErrorCaptured, ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router/auto'
 
 onErrorCaptured((err, instance, info) => {
   console.error('erreur : ', err, '\ninfo : ', info, '\ncomposant : ', instance)
   return true
 })
-const menuIsOpen = ref(false)
 const sectionsData = [
   {
     label: 'bouton 1',
@@ -33,13 +31,14 @@ const sectionsData = [
     quis corporis et nam.`
   }
 ]
+const activeAccordeon = ref(0)
 </script>
 
 <template>
   <h1 class="text-2xl">Boucle sur des données</h1>
-  <section v-for="({ label, texte }, key) of sectionsData" :v-key="key">
+  <section v-for="({ label, texte }, key) of sectionsData" :key="key">
   <pre class="font-mono">key : {{ key }}</pre>
-  <pre class="font-mono">label : {{ label }}</pre>
-  <pre class="font-mono">texte : {{ texte }}</pre>
+  <pre class="font-mono" @pointerdown="activeAccordeon = activeAccordeon === (key+1)?0:(key+1)">label : {{ label }}</pre>
+  <pre class="font-mono" v-show ="activeAccordeon === (key+1)">texte : {{ texte }}</pre>
 </section>
 </template>
