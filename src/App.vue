@@ -25,7 +25,8 @@ const menuIsOpen = ref(false)
 >
 <nav id="mainNav" v-show="menuIsOpen">
   <ul>
-    <li><RouterLink to="/">Lien vers Accordéon</RouterLink></li>
+    <li><RouterLink to="/">Homepage</RouterLink></li>
+    <li><RouterLink to="/accordeon">Lien vers Accordéon</RouterLink></li>
     <li><RouterLink to="/boucle">Lien vers Boucle sur des données</RouterLink></li>
   </ul>
 </nav>
